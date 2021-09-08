@@ -1,0 +1,5 @@
+project = "qweqwe"
+ssh_pub_key = "~/.ssh/id_rsa.pub"
+ssh_secret_key = "~/.ssh/id_rsa"
+credentials = "./service-account-key.json"
+user = "username"
