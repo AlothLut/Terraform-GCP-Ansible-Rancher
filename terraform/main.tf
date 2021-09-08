@@ -98,5 +98,9 @@ resource "local_file" "cluster" {
   )
   filename = "../k8s/cluster.yml"
 
+  provisioner "local-exec" {
+    command = "rm ../k8s/kube_config_cluster.yml && rm ../k8s/cluster.rkestate"
+  }
+
   depends_on = [google_compute_instance.work-node, google_compute_instance.master-node]
 }
